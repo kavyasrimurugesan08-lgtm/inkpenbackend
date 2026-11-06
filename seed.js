@@ -1,0 +1,58 @@
+const SEED = {
+  sample: true,
+  range: 'week',
+  site: {
+    phone: '+1 (800) 555-4657',
+    email: 'contact@inkpen.ink',
+    address: '742 Innovation Way, CA 94107',
+    social: {
+      instagram: 'https://www.instagram.com/inkpen.official/',
+      facebook: '',
+      linkedin: '',
+      x: ''
+    },
+    twofa: false,
+    logo: ''
+  },
+  visits: {
+    day: [212, 248, 231, 276, 302, 198, 167],
+    week: [1480, 1622, 1555, 1710, 1893, 1678, 1930, 2041],
+    month: [5210, 5630, 6012, 6480, 6105, 6890, 7320, 7015, 7760, 8120, 8640, 9010]
+  },
+  cats: [
+    { id: 'c1', name: 'Web Design' },
+    { id: 'c2', name: 'Marketing' },
+    { id: 'c3', name: 'Branding' }
+  ],
+  projects: [
+    { id: 'p1', title: 'Sample: storefront redesign', category: 'Web Design', description: 'Replace with a real project.', image: '' },
+    { id: 'p2', title: 'Sample: launch campaign', category: 'Marketing', description: '', image: '' }
+  ],
+  services: [
+    { id: 's1', name: 'Web Development', price: 'Custom quote', description: '', status: 'Live' },
+    { id: 's2', name: 'AI & Automation', price: 'Custom quote', description: '', status: 'Live' }
+  ],
+  leads: [
+    { id: 'l1', name: 'Sample: Avery Chen', email: 'avery@example.com', phone: '', message: 'Interested in a website refresh.', date: '2026-11-03', status: 'New' },
+    { id: 'l2', name: 'Sample: Jordan Ellis', email: 'jordan@example.com', phone: '+1 555 0100', message: 'Asking about a brand identity.', date: '2026-11-01', status: 'Replied' }
+  ],
+  reviews: [
+    { id: 'r1', author: 'Sample client', company: 'Example Co', quote: 'Clear communication and fast delivery.', status: 'Approved' },
+    { id: 'r2', author: 'Sample client two', company: 'Example Labs', quote: 'Helpful team from start to finish.', status: 'Hidden' }
+  ],
+  logos: [],
+  jobs: [
+    { id: 'j1', title: 'Frontend Developer', division: 'Tech', type: 'Full-time', location: 'Remote', description: 'Build polished web interfaces for client projects.', status: 'Open', created: 1793900000000 },
+    { id: 'j2', title: 'Video Editor', division: 'Media', type: 'Contract', location: 'Chennai', description: 'Edit short-form and long-form video content for campaigns.', status: 'Open', created: 1793800000000 },
+    { id: 'j3', title: 'Academy Instructor', division: 'Academy', type: 'Part-time', location: 'Remote', description: 'Deliver online sessions on design or technology topics.', status: 'Closed', created: 1793700000000 }
+  ],
+  team: [
+    { id: 't1', name: 'Sample member', role: 'Creative Director', url: '' }
+  ],
+  siteContent: {
+    texts: {},
+    imgs: {}
+  }
+};
+
+module.exports = { SEED };
