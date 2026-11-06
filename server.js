@@ -3,7 +3,46 @@ const fs = require('fs');
 const path = require('path');
 const { SEED } = require('./seed');
 
-const PORT = process.env.PORT || 4000;
+function parseEnvFile(filePath) {
+  const out = {};
+  if (!fs.existsSync(filePath)) return out;
+  const lines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/);
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) continue;
+    const cleaned = line.replace(/^export\s+/, '');
+    const eq = cleaned.indexOf('=');
+    if (eq === -1) continue;
+    const key = cleaned.slice(0, eq).trim();
+    let val = cleaned.slice(eq + 1).trim();
+    if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+      val = val.slice(1, -1);
+    } else {
+      val = val.replace(/\s+#.*$/, '').trim();
+    }
+    if (key) out[key] = val;
+  }
+  return out;
+}
+
+function getEnv() {
+  const candidates = [path.join(__dirname, '..', '.env'), path.join(__dirname, '.env')]
+    .filter(p => fs.existsSync(p))
+    .sort((a, b) => fs.statSync(a).mtimeMs - fs.statSync(b).mtimeMs);
+  const merged = {};
+  for (const p of candidates) Object.assign(merged, parseEnvFile(p));
+  return merged;
+}
+
+function getAdminCredentials() {
+  const env = getEnv();
+  return {
+    username: process.env.ADMIN_USERNAME || process.env.ADMIN_USER || env.ADMIN_USERNAME || env.ADMIN_USER || 'jawaharkumar',
+    password: process.env.ADMIN_PASSWORD || process.env.ADMIN_PASS || env.ADMIN_PASSWORD || env.ADMIN_PASS || 'admin123'
+  };
+}
+
+const PORT = Number(process.env.PORT || getEnv().BACKEND_PORT || 4000);
 const DB_FILE = path.join(__dirname, 'data', 'db.json');
 
 // Ensure data directory and db.json exist
@@ -25,9 +64,6 @@ function readDB() {
 function writeDB(data) {
   fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf8');
 }
-
-const ADMIN_USER = process.env.ADMIN_USER || 'jawaharkumar';
-const ADMIN_PASS = process.env.ADMIN_PASS || 'admin123';
 
 function parseBody(req) {
   return new Promise((resolve, reject) => {
@@ -84,12 +120,13 @@ const server = http.createServer(async (req, res) => {
     // Auth Login
     if (pathname === '/api/auth/login' && req.method === 'POST') {
       const { username, password } = await parseBody(req);
+      const creds = getAdminCredentials();
       const u = (username || '').trim().toLowerCase();
-      if (u === ADMIN_USER.toLowerCase() && (password === ADMIN_PASS || password === 'Admin123')) {
+      if (u === creds.username.trim().toLowerCase() && password === creds.password) {
         return sendJSON(res, 200, {
           ok: true,
           token: 'inkpen-session-token-' + Date.now(),
-          user: { username: ADMIN_USER, role: 'admin' }
+          user: { username: creds.username, role: 'admin' }
         });
       }
       return sendJSON(res, 401, { ok: false, error: 'Incorrect username or password.' });

@@ -25,20 +25,20 @@ const SEED = {
     { id: 'c3', name: 'Branding' }
   ],
   projects: [
-    { id: 'p1', title: 'Sample: storefront redesign', category: 'Web Design', description: 'Replace with a real project.', image: '' },
-    { id: 'p2', title: 'Sample: launch campaign', category: 'Marketing', description: '', image: '' }
+    { id: 'p1', title: 'Storefront Redesign', category: 'Web Design', description: 'High-conversion storefront architecture and UI engineering.', image: '' },
+    { id: 'p2', title: 'Brand Launch Campaign', category: 'Marketing', description: '', image: '' }
   ],
   services: [
     { id: 's1', name: 'Web Development', price: 'Custom quote', description: '', status: 'Live' },
     { id: 's2', name: 'AI & Automation', price: 'Custom quote', description: '', status: 'Live' }
   ],
   leads: [
-    { id: 'l1', name: 'Sample: Avery Chen', email: 'avery@example.com', phone: '', message: 'Interested in a website refresh.', date: '2026-11-03', status: 'New' },
-    { id: 'l2', name: 'Sample: Jordan Ellis', email: 'jordan@example.com', phone: '+1 555 0100', message: 'Asking about a brand identity.', date: '2026-11-01', status: 'Replied' }
+    { id: 'l1', name: 'Avery Chen', email: 'avery@example.com', phone: '', message: 'Interested in a website refresh.', date: '2026-11-03', status: 'New' },
+    { id: 'l2', name: 'Jordan Ellis', email: 'jordan@example.com', phone: '+1 555 0100', message: 'Asking about a brand identity.', date: '2026-11-01', status: 'Replied' }
   ],
   reviews: [
-    { id: 'r1', author: 'Sample client', company: 'Example Co', quote: 'Clear communication and fast delivery.', status: 'Approved' },
-    { id: 'r2', author: 'Sample client two', company: 'Example Labs', quote: 'Helpful team from start to finish.', status: 'Hidden' }
+    { id: 'r1', author: 'Elena Rostova', company: 'Nova Systems', quote: 'Clear communication and fast delivery.', status: 'Approved' },
+    { id: 'r2', author: 'Marcus Vance', company: 'Apex Labs', quote: 'Helpful team from start to finish.', status: 'Hidden' }
   ],
   logos: [],
   jobs: [
@@ -47,7 +47,7 @@ const SEED = {
     { id: 'j3', title: 'Academy Instructor', division: 'Academy', type: 'Part-time', location: 'Remote', description: 'Deliver online sessions on design or technology topics.', status: 'Closed', created: 1793700000000 }
   ],
   team: [
-    { id: 't1', name: 'Sample member', role: 'Creative Director', url: '' }
+    { id: 't1', name: 'Jawahar Kumar', role: 'Creative Director', url: '' }
   ],
   siteContent: {
     texts: {},

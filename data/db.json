@@ -66,14 +66,14 @@
   "projects": [
     {
       "id": "p1",
-      "title": "Sample: storefront redesign",
+      "title": "Storefront Redesign",
       "category": "Web Design",
-      "description": "Replace with a real project.",
+      "description": "High-conversion storefront architecture and UI engineering.",
       "image": ""
     },
     {
       "id": "p2",
-      "title": "Sample: launch campaign",
+      "title": "Brand Launch Campaign",
       "category": "Marketing",
       "description": "",
       "image": ""
@@ -98,7 +98,7 @@
   "leads": [
     {
       "id": "l1",
-      "name": "Sample: Avery Chen",
+      "name": "Avery Chen",
       "email": "avery@example.com",
       "phone": "",
       "message": "Interested in a website refresh.",
@@ -107,7 +107,7 @@
     },
     {
       "id": "l2",
-      "name": "Sample: Jordan Ellis",
+      "name": "Jordan Ellis",
       "email": "jordan@example.com",
       "phone": "+1 555 0100",
       "message": "Asking about a brand identity.",
@@ -118,41 +118,21 @@
   "reviews": [
     {
       "id": "r1",
-      "author": "Sample client",
-      "company": "Example Co",
+      "author": "Elena Rostova",
+      "company": "Nova Systems",
       "quote": "Clear communication and fast delivery.",
       "status": "Approved"
     },
     {
       "id": "r2",
-      "author": "Sample client two",
-      "company": "Example Labs",
+      "author": "Marcus Vance",
+      "company": "Apex Labs",
       "quote": "Helpful team from start to finish.",
       "status": "Hidden"
     }
   ],
   "logos": [],
   "jobs": [
-    {
-      "id": "j1",
-      "title": "Frontend Developer",
-      "division": "Tech",
-      "type": "Full-time",
-      "location": "Remote",
-      "description": "Build polished web interfaces for client projects.",
-      "status": "Open",
-      "created": 1793900000000
-    },
-    {
-      "id": "j2",
-      "title": "Video Editor",
-      "division": "Media",
-      "type": "Contract",
-      "location": "Chennai",
-      "description": "Edit short-form and long-form video content for campaigns.",
-      "status": "Open",
-      "created": 1793800000000
-    },
     {
       "id": "j3",
       "title": "Academy Instructor",
@@ -162,12 +142,21 @@
       "description": "Deliver online sessions on design or technology topics.",
       "status": "Closed",
       "created": 1793700000000
+    },
+    {
+      "id": "mw4mv97msit1",
+      "title": "Technical",
+      "division": "Tech",
+      "type": "Full-time",
+      "location": "",
+      "description": "",
+      "status": "Open"
     }
   ],
   "team": [
     {
       "id": "t1",
-      "name": "Sample member",
+      "name": "Jawahar Kumar",
       "role": "Creative Director",
       "url": ""
     }
