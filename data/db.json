@@ -2,9 +2,9 @@
   "sample": true,
   "range": "week",
   "site": {
-    "phone": "+1 (800) 555-4657",
-    "email": "contact@inkpen.ink",
-    "address": "742 Innovation Way, CA 94107",
+    "phone": "+91 78128 30030",
+    "email": "hello@inkpen.ink",
+    "address": "3rd Floor, 36/2, Chennimalai Road, Near Joseph Hospital, Cheran Nagar, Rangampalayam, Erode, Tamil Nadu 638009",
     "social": {
       "instagram": "https://www.instagram.com/inkpen.official/",
       "facebook": "",
@@ -175,5 +175,37 @@
   "siteContent": {
     "texts": {},
     "imgs": {}
+  },
+  "content": {
+    "heroPill": "🎓 The Nexus of Tech, Media & Academy",
+    "heroLine1": "Where Curiosity",
+    "heroLine2": "Writes The",
+    "heroLine3": "Future",
+    "heroSub": "An interdisciplinary power combining high-velocity technology engineering, cinematic creative media, and transformative industry academies.",
+    "heroBtn": "Explore Our Work →",
+    "storyEyebrow": "The story",
+    "storyHeading": "A boy, a sheep, and a question.",
+    "storyLine1": "Once, a curious boy followed a wandering sheep over the hill.",
+    "storyLine2": "Every step raised a question. Every question left a mark.",
+    "storyLine3": "That trail of ink became INKPEN.",
+    "divEyebrow": "Three divisions",
+    "divHeading": "One pen. Three crafts.",
+    "techTitle": "TECH",
+    "techDesc": "Enterprise software engineering built to scale.",
+    "academyTitle": "ACADEMY",
+    "academyDesc": "Industry education that turns curiosity into capability.",
+    "mediaTitle": "MEDIA",
+    "mediaDesc": "Cinematic media production with a storyteller’s eye.",
+    "stat1Num": "3",
+    "stat1Label": "Divisions",
+    "stat2Num": "120",
+    "stat2Label": "Projects",
+    "stat3Num": "2500",
+    "stat3Label": "Learners",
+    "stat4Num": "98",
+    "stat4Label": "Satisfaction",
+    "ctaHeading": "Let’s write what’s next.",
+    "ctaSub": "Tell us about your idea. We’ll reply with a plan.",
+    "footerBio": "Where curiosity writes the future. An interdisciplinary power uniting cutting-edge digital technology, cinematic media storytelling, and world-class educational academies."
   }
 }
